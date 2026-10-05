@@ -1,0 +1,375 @@
+/* =========================================
+   MY LIFE EVENTS
+   Nuxt Style Reference
+   ========================================= */
+
+
+/* ---------- ROOT VARIABLES ---------- */
+
+:root {
+    /* Colors */
+    --void-canvas: #020618;
+    --midnight-panel: #080e21;
+    --deep-slate: #0f172b;
+    --steel-outline: #1d293d;
+    --blue-steel: #314158;
+
+    --muted-fog: #90a1b9;
+    --pale-frost: #e2e8f0;
+    --signal-white: #ffffff;
+
+    --nuxt-signal: #00dc82;
+
+
+    /* Font */
+    --font-main:
+        "Public Sans",
+        Inter,
+        Arial,
+        sans-serif;
+
+
+    /* Spacing */
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-48: 48px;
+    --space-64: 64px;
+
+
+    /* Radius */
+    --radius-card: 8px;
+    --radius-control: 6px;
+}
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: var(--void-canvas);
+    color: var(--pale-frost);
+
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    min-height: 100vh;
+}
+
+
+/* ---------- MAIN PAGE ---------- */
+
+body {
+    padding-bottom: 64px;
+}
+
+
+/* ---------- MAIN HEADING ---------- */
+
+h1 {
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 64px 24px 24px;
+
+    color: var(--signal-white);
+
+    font-size: clamp(42px, 7vw, 72px);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -1.8px;
+}
+
+
+/* Green signal under heading */
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    margin-top: 20px;
+
+    background: var(--nuxt-signal);
+
+    border-radius: 6px;
+}
+
+
+/* ---------- INTRODUCTION ---------- */
+
+h1 + p {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 0 24px 48px;
+
+    color: var(--muted-fog);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* ---------- SECTION ---------- */
+
+h2 {
+    max-width: 1100px;
+
+    margin: 64px auto 20px;
+
+    padding: 0 24px;
+
+    color: var(--signal-white);
+
+    font-size: 48px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -1.2px;
+}
+
+
+/* Green indicator before every section */
+
+h2::before {
+    content: "›";
+
+    color: var(--nuxt-signal);
+
+    margin-right: 12px;
+
+    font-weight: 700;
+}
+
+
+/* ---------- LIST CONTAINER ---------- */
+
+ol,
+ul {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 12px 24px 12px 58px;
+
+    background: var(--midnight-panel);
+
+    border: 1px solid var(--steel-outline);
+
+    border-radius: var(--radius-card);
+}
+
+
+/* ---------- LIST ITEMS ---------- */
+
+li {
+    padding: 12px 16px;
+
+    margin: 4px 0;
+
+    color: var(--muted-fog);
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    border-radius: var(--radius-control);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* ---------- HOVER ---------- */
+
+li:hover {
+    background: var(--deep-slate);
+
+    color: var(--signal-white);
+}
+
+
+/* ---------- ORDERED LIST ---------- */
+
+ol li::marker {
+    color: var(--nuxt-signal);
+
+    font-weight: 700;
+}
+
+
+/* ---------- UNORDERED LIST ---------- */
+
+ul li::marker {
+    color: var(--nuxt-signal);
+}
+
+
+/* ---------- STRONG TEXT ---------- */
+
+strong {
+    color: var(--pale-frost);
+
+    font-weight: 600;
+}
+
+
+/* ---------- NESTED LISTS ---------- */
+
+li > ul,
+li > ol {
+    margin-top: 12px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    background: var(--deep-slate);
+
+    border-color: var(--blue-steel);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    max-width: 1100px;
+
+    margin: 64px auto 0;
+
+    padding: 24px;
+
+    border-top: 1px solid var(--steel-outline);
+
+    color: var(--muted-fog);
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ---------- SELECTION ---------- */
+
+::selection {
+    background: var(--nuxt-signal);
+
+    color: var(--deep-slate);
+}
+
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--void-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue-steel);
+
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--nuxt-signal);
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    h1 {
+        padding: 48px 20px 20px;
+
+        font-size: 48px;
+    }
+
+
+    h1 + p {
+        padding: 0 20px 32px;
+    }
+
+
+    h2 {
+        margin-top: 48px;
+
+        padding: 0 20px;
+
+        font-size: 36px;
+    }
+
+
+    ol,
+    ul {
+        margin-left: 16px;
+        margin-right: 16px;
+
+        padding-left: 42px;
+    }
+
+
+    li {
+        padding: 10px 12px;
+
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    h1 {
+        font-size: 40px;
+
+        letter-spacing: -1px;
+    }
+
+
+    h2 {
+        font-size: 30px;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    ol,
+    ul {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
